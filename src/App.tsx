@@ -29,15 +29,15 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-       <Route exact path="/home">
+       <Route exact path="/">
           <Home/>
         </Route>
       <IonRouterOutlet>
-      <Route exact path="/home">
+      <Route exact path="/">
           <Home/>
         </Route>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
