@@ -1,24 +1,31 @@
-.container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.App {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
-.container strong {
-  font-size: 20px;
-  line-height: 26px;
+.App .column {
+  width: 30%;
 }
 
-.container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+.droppable-col {
+  width: 100%;
+  background-color: gray;
+  padding: 10px 10px 0 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
 }
 
-.container a {
-  text-decoration: none;
+.item {
+  margin-bottom: 10px;
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.item.dragging {
+  background-color: coral;
 }
