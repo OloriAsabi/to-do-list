@@ -7,10 +7,10 @@ To Do List App
 
 ## I'm a Developer and DJ!
 
-I built a simple to-do list app developed in React.js using Ionic(implementing Hooks), lets the user create unlimited lists of to-do's through a user-friendly and responsive interface.d Library to build Android and IOS app
+I built a simple to-do list app developed in React.js using Ionic(implementing Hooks), lets the user create unlimited lists of to-do's through a user-friendly and responsive interface.
 
 
-- 🌱 I’m currently learning React typescript
+- 🌱 I’m currently learning React in typescript
 - 👯 I’m looking to collaborate with other content creators
 - 🥅 2021 Goals: Contribute more to Open Source projects and build more projects.
 - ⚡ Fun fact: I love to read books and music
