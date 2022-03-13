@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRouterLink } from '@ionic/react';
 import './Home.css';
 import React from 'react';
 import ExploreContainer from '../components/ExploreContainer';
@@ -9,13 +9,13 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>To-Do-List-App</IonTitle>
+          <IonTitle> <IonRouterLink href="/home" routerDirection="back">To-Do-List-App</IonRouterLink></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">To-Do-List-App</IonTitle>
+          <IonTitle> <IonRouterLink href="/home" routerDirection="back">To-Do-List-App</IonRouterLink></IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer/>
