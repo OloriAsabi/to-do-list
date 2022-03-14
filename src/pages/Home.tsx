@@ -9,13 +9,13 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle> <IonRouterLink href="/home" routerDirection="back">To-Do-List-App</IonRouterLink></IonTitle>
+          <IonTitle>To-Do-List-App</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-          <IonTitle> <IonRouterLink href="/home" routerDirection="back">To-Do-List-App</IonRouterLink></IonTitle>
+          <IonTitle>To-Do-List-App</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer/>
