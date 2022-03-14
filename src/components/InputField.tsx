@@ -1,3 +1,4 @@
+import { IonPage } from "@ionic/react";
 import React, { useRef } from "react";
 
 interface Props {
@@ -11,6 +12,7 @@ export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
+    <IonPage>
     <form
       className="input"
       onSubmit={(e) => {
@@ -30,6 +32,7 @@ export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
         Go
       </button>
     </form>
+    </IonPage>
   );
 };
 

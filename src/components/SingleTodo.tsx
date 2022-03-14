@@ -3,6 +3,7 @@ import { Todo } from "./model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
 import { Draggable } from "react-beautiful-dnd";
+import { IonPage } from "@ionic/react";
 
 type Props = {
   index: number;
@@ -42,6 +43,7 @@ type Props = {
   }, [edit]);
 
   return (
+    <IonPage>
     <Draggable draggableId={todo.id.toString()} index={index}>
       {(provided, snapshot) => (
         <form
@@ -85,6 +87,7 @@ type Props = {
         </form>
       )}
     </Draggable>
+    </IonPage>
   );
 };
 

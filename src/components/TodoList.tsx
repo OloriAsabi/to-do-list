@@ -1,3 +1,4 @@
+import { IonPage } from "@ionic/react";
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 import { Todo } from "./model";
@@ -18,6 +19,7 @@ const TodoList: React.FC<Props> = ({
   setCompletedTodos,
 }) => {
   return (
+    <IonPage>
     <div className="container">
       <Droppable droppableId="TodoList">
         {(provided, snapshot) => (
@@ -64,6 +66,7 @@ const TodoList: React.FC<Props> = ({
         )}
       </Droppable>
     </div>
+    </IonPage>
   );
 };
 
