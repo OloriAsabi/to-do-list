@@ -1,4 +1,4 @@
-import { IonPage } from "@ionic/react";
+import { IonButton, IonInput, IonPage } from "@ionic/react";
 import React, { useRef } from "react";
 
 interface Props {
@@ -8,11 +8,10 @@ interface Props {
 }
 //export const InputField:React.FC<Props> = {} de olur.
 
-export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+export const InputField: React.FC <Props> = ({ todo, setTodo, handleAdd }) => {
+  const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
   return (
-    <IonPage>
     <form
       className="input"
       onSubmit={(e) => {
@@ -22,17 +21,16 @@ export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
     >
       <input
         ref={inputRef}
-        type="input"
+        type="text"
         placeholder="Enter a task"
         className="input__box"
         value={todo}
-        onChange={(e) => setTodo(e.target.value)}
+        onChange={(e : any) => setTodo(e.target.value)}
       ></input>
       <button className="input_submit" type="submit">
         Go
       </button>
     </form>
-    </IonPage>
   );
 };
 

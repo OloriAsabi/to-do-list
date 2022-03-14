@@ -3,7 +3,7 @@ import { Todo } from "./model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
 import { Draggable } from "react-beautiful-dnd";
-import { IonPage } from "@ionic/react";
+import { IonContent, IonInput, IonPage } from "@ionic/react";
 
 type Props = {
   index: number;
@@ -12,7 +12,7 @@ type Props = {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
- const SingleTodo: React.FC<Props> = ({ index, todo, todos, setTodos }) => {
+ const SingleTodo: React.FC <Props> = ({ index, todo, todos, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string | number>(todo.todo);
 
@@ -36,14 +36,13 @@ type Props = {
     setEdit(false);
   };
 
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
   useEffect(() => {
     inputRef.current?.focus();
   }, [edit]);
 
   return (
-    <IonPage>
     <Draggable draggableId={todo.id.toString()} index={index}>
       {(provided, snapshot) => (
         <form
@@ -57,7 +56,7 @@ type Props = {
             <input
               ref={inputRef}
               value={editTodo}
-              onChange={(e) => setEditTodo(e.target.value)}
+              onChange={(e : any) => setEditTodo(e.target.value)}
               className="todos__single--text"
             />
           ) : todo.isDone ? (
@@ -87,7 +86,6 @@ type Props = {
         </form>
       )}
     </Draggable>
-    </IonPage>
   );
 };
 

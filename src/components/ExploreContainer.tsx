@@ -3,7 +3,9 @@ import InputField from "./InputField";
 import { Todo } from "./model";
 import TodoList from "./TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { IonPage } from "@ionic/react";
+import { IonContent, IonList } from "@ionic/react";
+
+import  '../pages/Home.css'
 
 const ExploreContainer: React.FC = () => {
   const [todo, setTodo] = useState<string | number>("");
@@ -51,7 +53,6 @@ const ExploreContainer: React.FC = () => {
   };
 
   return (
-    <IonPage>
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
         <span className="heading">To Do List</span>
@@ -71,7 +72,6 @@ const ExploreContainer: React.FC = () => {
       ))}
       </div>
     </DragDropContext>
-    </IonPage>
   );
 };
 
