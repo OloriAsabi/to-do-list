@@ -3,7 +3,6 @@ import { Todo } from "./model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
 import { Draggable } from "react-beautiful-dnd";
-import { IonContent, IonInput, IonPage } from "@ionic/react";
 
 type Props = {
   index: number;
@@ -17,7 +16,7 @@ type Props = {
   const [editTodo, setEditTodo] = useState<string | number>(todo.todo);
 
   const handleDone = (id: number) => {
-    setTodos(
+  setTodos(
       todos.map((todo) =>
         todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
       )

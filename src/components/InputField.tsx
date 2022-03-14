@@ -1,4 +1,3 @@
-import { IonButton, IonInput, IonPage } from "@ionic/react";
 import React, { useRef } from "react";
 
 interface Props {

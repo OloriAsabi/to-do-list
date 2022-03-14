@@ -3,7 +3,6 @@ import InputField from "./InputField";
 import { Todo } from "./model";
 import TodoList from "./TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { IonContent, IonList } from "@ionic/react";
 
 import  '../pages/Home.css'
 

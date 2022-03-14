@@ -1,4 +1,3 @@
-import { IonContent, IonPage } from "@ionic/react";
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 import { Todo } from "./model";
